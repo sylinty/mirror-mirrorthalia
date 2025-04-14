@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Mirror Mirror</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="step-container">
+            <div class="step" id="step1">
+                <h1>Hey girlie, welcome to <span class="highlight">Mirror Mirror</span>!</h1>
+                <button onclick="nextStep()">Start Setup</button>
+            </div>
+
+            <div class="step" id="step2" style="display:none;">
+                <h2>What’s your name, beautiful?</h2>
+                <input type="text" id="nameInput" placeholder="Enter your name">
+                <button onclick="nextStep()">Next</button>
+            </div>
+
+            <div class="step" id="step3" style="display:none;">
+                <h2>Who are you?</h2>
+                <select id="identity">
+                    <option value="student">Student</option>
+                    <option value="creator">Creator</option>
+                    <option value="dreamer">Dreamer</option>
+                    <option value="queen">Queen</option>
+                    <option value="custom">Custom</option>
+                </select>
+                <button onclick="nextStep()">Next</button>
+            </div>
+
+            <div class="step" id="step4" style="display:none;">
+                <h2>How young and powerful are you?</h2>
+                <input type="range" min="10" max="35" id="ageSlider" oninput="updateAgeLabel()">
+                <p id="ageLabel">Age: 10</p>
+                <button onclick="nextStep()">Next</button>
+            </div>
+
+            <div class="step" id="step5" style="display:none;">
+                <h2>Pick your vibes:</h2>
+                <label><input type="checkbox" value="journaling"> Journaling</label><br>
+                <label><input type="checkbox" value="school"> School</label><br>
+                <label><input type="checkbox" value="fitness"> Fitness</label><br>
+                <label><input type="checkbox" value="period"> Period Tracking</label><br>
+                <label><input type="checkbox" value="jesus"> Jesus Time</label><br>
+                <label><input type="checkbox" value="mental"> Mental Health</label><br>
+                <label><input type="checkbox" value="selflove"> Self-Love</label><br>
+                <label><input type="checkbox" value="gaming"> Gaming</label><br>
+                <label><input type="checkbox" value="fashion"> Fashion</label><br>
+                <label><input type="checkbox" value="food"> Food</label><br>
+                <button onclick="nextStep()">Next</button>
+            </div>
+
+            <div class="step" id="step6" style="display:none;">
+                <h2>Pick your aesthetic:</h2>
+                <select id="theme">
+                    <option value="pastel">Pastel</option>
+                    <option value="dark_femme">Dark Femme</option>
+                    <option value="glitter_pop">Glitter Pop</option>
+                    <option value="minimal">Minimal</option>
+                    <option value="fantasy_garden">Fantasy Garden</option>
+                </select>
+                <button onclick="nextStep()">Next</button>
+            </div>
+
+            <div class="step" id="step7" style="display:none;">
+                <h2>Upload your cutest pic:</h2>
+                <input type="file" id="profilePic">
+                <button onclick="nextStep()">Next</button>
+            </div>
+
+            <div class="step" id="step8" style="display:none;">
+                <h2>Pick your cozy companion:</h2>
+                <select id="animal">
+                    <option value="bunny">Bunny</option>
+                    <option value="baby_deer">Baby Deer</option>
+                    <option value="baby_fox">Baby Fox</option>
+                    <option value="cat_ribbon">Cat with Ribbon</option>
+                    <option value="baby_dragon">Baby Dragon</option>
+                    <option value="panda">Panda</option>
+                    <option value="sea_otter">Sea Otter</option>
+                </select>
+                <button onclick="finishSetup()">Start Journey</button>
+            </div>
+
+            <div class="step" id="finalStep" style="display:none;">
+                <h1>Welcome to your world, <span id="finalName" class="highlight"></span>!</h1>
+                <p>Your personalized Mirror Mirror experience is ready.</p>
+            </div>
+        </div>
+    </div>
+    <script src="onboarding.js"></script>
+</body>
+</html>

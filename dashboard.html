@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirror Mirror Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <h1 id="greeting">Good Morning, Queen!</h1>
+        <p class="emoji">✨ Your sparkle companion: <span id="companion"></span></p>
+        <div class="buttons">
+            <button onclick="goTo('journal')">Journal</button>
+            <button onclick="goTo('planner')">Planner</button>
+            <button onclick="goTo('ai')">Ask AI</button>
+            <button onclick="goTo('faith')">Christian Corner</button>
+        </div>
+    </div>
+    <script>
+        const name = localStorage.getItem('mirror_user_name') || 'Girlie';
+        const animal = localStorage.getItem('mirror_user_animal') || 'Bunny';
+        document.getElementById('greeting').textContent = `Good Morning, ${name}!`;
+        document.getElementById('companion').textContent = animal;
+
+        function goTo(section) {
+            alert(`${section} is coming soon, cutie!`);
+        }
+    </script>
+</body>
+</html>
