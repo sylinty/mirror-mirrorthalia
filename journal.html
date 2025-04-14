@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal - Mirror Mirror</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <h1>📝 Journal</h1>
+        <textarea id="journalEntry" placeholder="Write about your day, your mood, or your dreams... 💭"></textarea>
+        <br>
+        <button onclick="saveJournal()">Save Entry</button>
+        <p id="saveMessage" style="margin-top: 10px;"></p>
+    </div>
+    <script>
+        function saveJournal() {
+            const entry = document.getElementById("journalEntry").value;
+            localStorage.setItem("mirror_journal", entry);
+            document.getElementById("saveMessage").textContent = "Saved with love 💖";
+        }
+    </script>
+</body>
+</html>

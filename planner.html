@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner - Mirror Mirror</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <h1>📅 Planner</h1>
+        <input type="text" id="taskInput" placeholder="Add a task or assignment 📚">
+        <button onclick="addTask()">Add</button>
+        <ul id="taskList"></ul>
+    </div>
+    <script>
+        function addTask() {
+            const task = document.getElementById("taskInput").value;
+            if (task) {
+                const list = document.getElementById("taskList");
+                const li = document.createElement("li");
+                li.textContent = task;
+                list.appendChild(li);
+                document.getElementById("taskInput").value = "";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat - Mirror Mirror</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <h1>🤖 Talk to Mirror AI</h1>
+        <textarea id="userInput" placeholder="Ask me anything, bestie! 💬"></textarea>
+        <br>
+        <button onclick="respond()">Send</button>
+        <p id="aiResponse" style="margin-top: 15px;"></p>
+    </div>
+    <script>
+        function respond() {
+            const input = document.getElementById("userInput").value;
+            document.getElementById("aiResponse").textContent = "Your AI bestie says: 'You're amazing no matter what! 🌟 (Real AI coming soon)'";
+        }
+    </script>
+</body>
+</html>
